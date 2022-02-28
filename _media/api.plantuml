@@ -1,0 +1,4 @@
+@startuml
+[CSS-in-JS] -> [PostCSS AST]: toAST
+[PostCSS AST] -> [CSS-in-JS] : toObject
+@enduml
