@@ -166,6 +166,52 @@ test("toObject", () => {
         },
       },
     ],
+    [
+      new Root({
+        nodes: [
+          new AtRule({
+            name: "media",
+            params: "(min-width: 640px)",
+            nodes: [
+              new Rule({
+                selector: ".sm:block",
+                nodes: [
+                  new Declaration({
+                    prop: "display",
+                    value: "block",
+                  }),
+                ],
+              }),
+            ],
+          }),
+          new AtRule({
+            name: "media",
+            params: "(min-width: 640px)",
+            nodes: [
+              new Rule({
+                selector: ".sm:inline",
+                nodes: [
+                  new Declaration({
+                    prop: "display",
+                    value: "inline",
+                  }),
+                ],
+              }),
+            ],
+          }),
+        ],
+      }),
+      {
+        "@media (min-width: 640px)": {
+          ".sm:block": {
+            display: "block",
+          },
+          ".sm:inline": {
+            display: "inline",
+          },
+        },
+      },
+    ],
   ];
 
   table.forEach(([ast, result]) => expect(toObject(ast)).toEqual(result));

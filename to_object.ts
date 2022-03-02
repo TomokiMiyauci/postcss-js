@@ -1,5 +1,4 @@
-import { BinaryTree, ChildNode } from "./deps.ts";
-
+import { BinaryTree, ChildNode, deepMerge } from "./deps.ts";
 /** PostCSS AST to JavaScript Object(CSS-in-JS) */
 export function toObject(
   ast: { nodes: ChildNode[] },
@@ -7,15 +6,15 @@ export function toObject(
   return ast.nodes.reduce((acc, cur) => {
     if (cur.type === "atrule") {
       const atRule = constructAtRule(cur.name, cur.params);
-      return { ...acc, [atRule]: toObject(cur) };
+      return deepMerge(acc, { [atRule]: toObject(cur) });
     }
     if (cur.type === "rule") {
-      return { ...acc, [cur.selector]: toObject(cur) };
+      return deepMerge(acc, { [cur.selector]: toObject(cur) });
     }
     if (cur.type === "decl") {
       const prop = constructProp(cur.prop, cur.variable);
       const value = constructValue(cur.value, cur.important);
-      return { ...acc, [prop]: value };
+      return deepMerge(acc, { [prop]: value });
     }
     return acc;
   }, {});
