@@ -1,3 +1,10 @@
+# [1.0.0-beta.3](https://github.com/TomokiMiyauci/postcss-js/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2022-03-05)
+
+
+### Bug Fixes
+
+* not use types export syntax for support deno 1.14 ([59b91aa](https://github.com/TomokiMiyauci/postcss-js/commit/59b91aadd3e1db535c3902c3b6b8739fc5d73f75))
+
 # [1.0.0-beta.2](https://github.com/TomokiMiyauci/postcss-js/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2022-03-02)
 
 
