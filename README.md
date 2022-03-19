@@ -19,7 +19,7 @@ import {
   toAST,
   toObject,
 } from "https://deno.land/x/postcss_js@$VERSION/mod.ts";
-import { parse } from "https://deno.land/x/postcss@8.4.6/lib/postcss.js";
+import { parse } from "https://deno.land/x/postcss_core@$VERSION/lib/postcss.js";
 import { expect } from "https://deno.land/x/unitest/mod.ts";
 
 const css = `
@@ -61,10 +61,10 @@ declare function toAST(object: BinaryTree<string | number>): Root;
 
 ```ts
 import { toAST } from "https://deno.land/x/postcss_js@$VERSION/mod.ts";
-import Rule from "https://deno.land/x/postcss@8.4.6/lib/rule.js";
-import Declaration from "https://deno.land/x/postcss@8.4.6/lib/declaration.js";
-import AtRule from "https://deno.land/x/postcss@8.4.6/lib/at-rule.js";
-import Root from "https://deno.land/x/postcss@8.4.6/lib/root.js";
+import Rule from "https://deno.land/x/postcss_core@$VERSION/lib/rule.js";
+import Declaration from "https://deno.land/x/postcss_core@$VERSION/lib/declaration.js";
+import AtRule from "https://deno.land/x/postcss_core@$VERSION/lib/at-rule.js";
+import Root from "https://deno.land/x/postcss_core@$VERSION/lib/root.js";
 
 import { expect } from "https://deno.land/x/unitest/mod.ts";
 const style = {
@@ -132,10 +132,10 @@ declare function toObject(ast: {
 
 ```ts
 import { toObject } from "https://deno.land/x/postcss_js@$VERSION/mod.ts";
-import Rule from "https://deno.land/x/postcss@8.4.6/lib/rule.js";
-import Declaration from "https://deno.land/x/postcss@8.4.6/lib/declaration.js";
-import AtRule from "https://deno.land/x/postcss@8.4.6/lib/at-rule.js";
-import Root from "https://deno.land/x/postcss@8.4.6/lib/root.js";
+import Rule from "https://deno.land/x/postcss_core@$VERSION/lib/rule.js";
+import Declaration from "https://deno.land/x/postcss_core@$VERSION/lib/declaration.js";
+import AtRule from "https://deno.land/x/postcss_core@$VERSION/lib/at-rule.js";
+import Root from "https://deno.land/x/postcss_core@$VERSION/lib/root.js";
 
 import { expect } from "https://deno.land/x/unitest/mod.ts";
 

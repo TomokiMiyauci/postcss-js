@@ -1,5 +1,6 @@
 {
   "imports": {
-    "https://deno.land/x/postcss_js@$VERSION/": "./"
+    "https://deno.land/x/postcss_js@$VERSION/": "./",
+    "https://deno.land/x/postcss_core@$VERSION/": "https://deno.land/x/postcss_core@v1.0.0-beta.1/"
   }
 }
