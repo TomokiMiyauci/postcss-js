@@ -1,3 +1,10 @@
+# [1.0.0-beta.4](https://github.com/TomokiMiyauci/postcss-js/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2022-03-19)
+
+
+### Features
+
+* use postcss_core instread of postcss module ([2dc05e7](https://github.com/TomokiMiyauci/postcss-js/commit/2dc05e79d75d8e2afa655aae89af31fe86dfd978))
+
 # [1.0.0-beta.3](https://github.com/TomokiMiyauci/postcss-js/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2022-03-05)
 
 
